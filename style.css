@@ -54,8 +54,6 @@ form #answer {  background: #c5c5c580; border-color: #4296af78;}
     font-size: 24px;
 }
 
-
-
 .ball {
     width: 20vw;
     height: 40vh;
@@ -64,7 +62,9 @@ form #answer {  background: #c5c5c580; border-color: #4296af78;}
     border-color: #83919b;
     border-radius: 50%;
     background-image:url(source/3.gif);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 2vh 0 4vh 0;
 }
 
