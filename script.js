@@ -21,9 +21,10 @@ form.appendChild(input);
 form.appendChild(ball);
 form.appendChild(output);
 
+let again = "А де питання?)";
 input.type = "input";
 title.textContent = "Шар долі";
-input.addEventListener('keydown', function (event) { if (event.key === 'Enter') { event.preventDefault(); answer(); } });
+input.addEventListener('keydown', function (event) { if (event.key === 'Enter') { if (input.value === "" || input.value === " ") { output.value = again; } else event.preventDefault(); answer(); } });
 ball.onclick = () => answer();
 
 let array = [
@@ -61,5 +62,6 @@ let array = [
 function answer() {
     let i = Math.floor(Math.random() * array.length);
     let answer = array[i];
+    if (input.value === "" || input.value === " ") { output.value = again; } else
     output.value = answer;
 };
